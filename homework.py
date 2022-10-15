@@ -5,7 +5,8 @@ class InfoMessage:
 
 class Training:
     """Базовый класс тренировки."""
-
+    M_IN_KM = 1000 # константа для перевода метров в километры
+    LEN_STEP = action*0.65 #перевод шагов в метры
     def __init__(self,
                  action: int,
                  duration: float,
