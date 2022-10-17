@@ -1,6 +1,6 @@
 import sys
-from io import StringIO
 from pathlib import Path
+from io import StringIO
 
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 sys.path.append(str(BASE_DIR))

@@ -1,8 +1,7 @@
-import inspect
 import re
-import types
-
 import pytest
+import types
+import inspect
 from conftest import Capturing
 
 try:
