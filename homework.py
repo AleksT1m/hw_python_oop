@@ -24,8 +24,8 @@ class InfoMessage:
 class Training:
     """Базовый класс тренировки."""
 
-    M_IN_KM = 1000
-    LEN_STEP = 0.65
+    M_IN_KM = 1000  # метров в километре
+    LEN_STEP = 0.65  # коэффициент для перевода шагов в метры
     MIN_IN_H = 60  # минут в часе
 
     def __init__(self,
@@ -59,8 +59,8 @@ class Training:
 class Running(Training):
     """Тренировка: бег."""
 
-    CALORIES_MEAN_SPEED_MULTIPLIER: int = 18
-    CALORIES_MEAN_SPEED_SHIFT: float = 1.79
+    CALORIES_MEAN_SPEED_MULTIPLIER: int = 18  # 1-й кэф для ккал в беге
+    CALORIES_MEAN_SPEED_SHIFT: float = 1.79  # 2-й кэф для ккал в беге
 
     def get_spent_calories(self) -> float:
         """Получить количество затраченных калорий."""
@@ -72,10 +72,10 @@ class Running(Training):
 class SportsWalking(Training):
     """Тренировка: спортивная ходьба."""
 
-    CALORIES_WEIGHT_MULTIPLIER: float = 0.035
-    CALORIES_SPEED_HEIGHT_MULTIPLIER: float = 0.029
-    KMH_IN_MSEC = 0.278
-    CM_IN_M = 100
+    CALORIES_WEIGHT_MULTIPLIER: float = 0.035  # кэф к весу в ходьбе
+    CALORIES_SPEED_HEIGHT_MULTIPLIER: float = 0.029  # кэф к росту в ходьбе
+    KMH_IN_MSEC = 0.278  # коэффициент для перевода из км/ч в м/с
+    CM_IN_M = 100  # сантиметров в метре
 
     def __init__(self,
                  action: int,
@@ -97,9 +97,9 @@ class SportsWalking(Training):
 class Swimming(Training):
     """Тренировка: плавание."""
 
-    LEN_STEP: float = 1.38
-    CALORIES_MEAN_SPEED_SHIFT: float = 1.1
-    CALORIES_WEIGHT_MULTIPLIER: float = 2
+    LEN_STEP: float = 1.38  # переопределенный кэф гребки в метры
+    CALORIES_MEAN_SPEED_SHIFT: float = 1.1  # кэф для ср. срокости в плавании
+    CALORIES_WEIGHT_MULTIPLIER: float = 2  # кэф для веса в плавании
 
     def __init__(self,
                  action: int,
