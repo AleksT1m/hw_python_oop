@@ -24,9 +24,9 @@ class InfoMessage:
 class Training:
     """Базовый класс тренировки."""
 
-    M_IN_KM = 1000  # метров в километре
-    LEN_STEP = 0.65  # коэффициент для перевода шагов в метры
-    MIN_IN_H = 60  # минут в часе
+    M_IN_KM: int = 1000  # метров в километре
+    LEN_STEP: float = 0.65  # коэффициент для перевода шагов в метры
+    MIN_IN_H: int = 60  # минут в часе
 
     def __init__(self,
                  action: int,
@@ -74,8 +74,8 @@ class SportsWalking(Training):
 
     CALORIES_WEIGHT_MULTIPLIER: float = 0.035  # кэф к весу в ходьбе
     CALORIES_SPEED_HEIGHT_MULTIPLIER: float = 0.029  # кэф к росту в ходьбе
-    KMH_IN_MSEC = 0.278  # коэффициент для перевода из км/ч в м/с
-    CM_IN_M = 100  # сантиметров в метре
+    KMH_IN_MSEC: float = 0.278  # коэффициент для перевода из км/ч в м/с
+    CM_IN_M: int = 100  # сантиметров в метре
 
     def __init__(self,
                  action: int,
